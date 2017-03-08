@@ -1,2 +1,2 @@
-[tomcat-servers]
-webserver01
+[tomcat]
+localhost ansible_connection=local
