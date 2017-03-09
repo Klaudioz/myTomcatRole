@@ -20,7 +20,7 @@
 - name: Identify the space available in /
   shell: |
     df -BK / | awk '/^[^Filesystem]/ {print $4}' | sed 's/K//' | tr -d "\n" | sed s'/.$//'
-register: root_space_used
+  register: root_space_used
 
 - set_fact:
     compare: "{{(root_space_used.stdout|int) > 90}}"
